@@ -7,23 +7,22 @@
 
 
 #include <iostream>
-#include <vector>
-#include <valarray>
+#include "../NMatrixDefine.h"
 
 using namespace std;
 
 class SolveLinearEquations {
 protected:
     size_t n{};
-    vector<vector<double>> A;
+    matrixv A;
     valarray<double> b;
 
 public:
     SolveLinearEquations() = default;
 
-    SolveLinearEquations(vector<vector<double>> &A, valarray<double> &b, size_t n);
+    SolveLinearEquations(matrixv &A, valarray<double> &b, size_t n);
 
-    ~SolveLinearEquations() = default;
+    virtual ~SolveLinearEquations() = default;
 
 };
 

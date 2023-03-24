@@ -6,21 +6,17 @@
 #define MAIN_CPP_ITERATIVEMETHOD_H
 
 #include <iostream>
-#include <vector>
-#include <valarray>
+#include "../NMatrixDefine.h"
 #include "SolveLinearEquations.h"
 
 using namespace std;
 
 class IterativeMethod: public SolveLinearEquations{
 private:
-    size_t n{};
-    vector<vector<double>> A;
-    valarray<double> b;
     double eps;
     int max_iter;
 public:
-    IterativeMethod(vector<vector<double>> &A, valarray<double> &b, size_t n,double eps,int max_iter);
+    IterativeMethod(matrixv &A, valarray<double> &b, size_t n,double eps,int max_iter);
 public:
     valarray<double> gmres_solver();
 

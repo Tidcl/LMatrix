@@ -23,4 +23,4 @@ add_executable(6
         FEM/FEMCoreIdea/FEMSolver.cpp FEM/FEMCoreIdea/FEMSolver.h
         FEM/FEMCoreIdea/GenerateMatrixPbTb.cpp FEM/FEMCoreIdea/GenerateMatrixPbTb.h
 
-        )
+        FEM/NMatrixDefine.h)

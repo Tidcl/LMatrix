@@ -6,8 +6,7 @@
 #define MAIN_CPP_SOLVEEIGENVALUE_H
 
 #include <iostream>
-#include <vector>
-#include <valarray>
+#include "../NMatrixDefine.h"
 #include "../Tools/TypeConversion.h"
 
 using namespace std;
@@ -18,7 +17,6 @@ private:
     vector<vector<double>> A;
     int max_iter;
     double eps;
-
 public:
     SolveEigenValue(vector<vector<double>> &A, int &max_iter, double &eps);
 

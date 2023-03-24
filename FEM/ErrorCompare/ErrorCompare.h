@@ -6,35 +6,33 @@
 #define MAIN_CPP_ERRORCOMPARE_H
 
 #include <iostream>
-#include <vector>
+#include "../NMatrixDefine.h"
 
 using namespace std;
 
 class ErrorCompareAnalysis {
 private:
-    vector<vector<double>> P;
+    matrixv P;
     int num_node;
-//    int left;
-//    double h_basis;
 
 public:
-    ErrorCompareAnalysis(int &num_node, vector<vector<double>> &P);
+    ErrorCompareAnalysis(int &num_node, matrixv &P);
 
     ~ErrorCompareAnalysis() = default;
 
 public:
 
-    double get_entire_error_1d(vector<vector<double>> &solution,
-                               vector<double> &error_list, bool show_error_list) const;
+    double get_entire_error_1d(matrixv &solution,
+                               vecd &error_list, bool show_error_list) const;
 
-    double get_entire_error_2d(vector<vector<double>> &solution);
+    double get_entire_error_2d(matrixv &solution);
 
     static double exact_solution(double x);
 
     static double exact_solution(double x,double y);
 };
 
-//void printVector(vector<double> &array) {
+//void printVector(vecd &array) {
 //    for (int i = 0; i < array.size(); ++i) {
 //        cout << array[i] << '\t' << '\t';
 //    }

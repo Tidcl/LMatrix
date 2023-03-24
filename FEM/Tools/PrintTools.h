@@ -1,10 +1,7 @@
 #ifndef MAIN_CPP_MYOBJECT_H
 #define MAIN_CPP_MYOBJECT_H
 
-#include <iostream>
-#include <vector>
-#include <valarray>
-
+#include "../NMatrixDefine.h"
 using namespace std;
 
 class MyPrint {
@@ -16,11 +13,11 @@ public:
 
 public:
 
-    void print_vector(vector<double> &vtr) const;
+    void print_vector(vecd &vtr) const;
 
     void print_vector(valarray<double> &valary) const;
 
-    void print_matrix(vector<vector<double>> &mtx) const;
+    void print_matrix(matrixv &mtx) const;
 
 };
 

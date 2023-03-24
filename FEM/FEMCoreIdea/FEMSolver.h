@@ -6,17 +6,17 @@
 #define RUNSCRIPY_PY_FEMSOLVER1D_H
 
 #include <iostream>
-#include <vector>
+#include "../NMatrixDefine.h"
 
 using namespace std;
 
 class FeSolverPoisson1D {
 public:
-    FeSolverPoisson1D(int left, int right,int bottom, int top,vector<double>&h,
+    FeSolverPoisson1D(int left, int right,int bottom, int top,vecd&h,
                       int basis_type_try, int basis_type_test,
                       int number_of_integral);
 
-    FeSolverPoisson1D(int left, int right, vector<double>&h,
+    FeSolverPoisson1D(int left, int right, vecd&h,
                       int basis_type_try, int basis_type_test,
                       int number_of_integral);
 
@@ -31,7 +31,7 @@ private:
     double left, right, bottom{},top{};
     int number_of_integral;
     int basis_type_try, basis_type_test;
-    vector<double> h;
+    vecd h;
 };
 
 

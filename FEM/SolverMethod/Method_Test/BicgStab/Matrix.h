@@ -3,7 +3,7 @@
 #pragma once
 
 #include <iostream>
-#include <vector>
+#include "../../../NMatrixDefine.h"
 
 using namespace std;
 
@@ -11,16 +11,13 @@ class Matrix {
 public:
     size_t m_row;
     size_t m_col;
-    vector<vector<double>> m_element;
+    matrixv m_element;
 public:
-
-    Matrix(int m, int n, const vector<vector<double>> &A);
+    Matrix(int m, int n, const matrixv &A);
+    Matrix(const Matrix &rhs) = default;
+    Matrix &operator=(const Matrix &rhs) = default;
 
     ~Matrix() = default;
-
-    Matrix(const Matrix &rhs) = default;
-
-    Matrix &operator=(const Matrix &rhs) = default;
 
     double &element(int i, int j)  { return m_element[i][j]; }
     double element(int i, int j) const { return m_element[i][j]; }

@@ -2,11 +2,11 @@
 #define GAUSSEPP_CPP_GMRES_H
 
 #include <iostream>
-#include <vector>
+#include "../../NMatrixDefine.h"
 
 using namespace std;
 
-template<class Tv = vector<double>>
+template<class Tv = vecd>
 class Gmres {
 public:
     int m_size{};
@@ -14,15 +14,11 @@ public:
     vector<Tv> m_mtx;
 public:
     Gmres();
-
-    ~Gmres();
-
     Gmres(const Gmres &) = default;
-
     Gmres(int);
-
     Gmres(int, int, const vector<Tv> &m_mtx, const Tv &m_b);
 
+    ~Gmres();
 public:
     void printMatrix(vector<Tv> &);
 

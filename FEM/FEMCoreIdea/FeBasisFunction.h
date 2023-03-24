@@ -6,7 +6,7 @@
 #define MAIN_CPP_FEBASFUN1D_H
 
 #include <iostream>
-#include <vector>
+#include "../NMatrixDefine.h"
 
 using namespace std;
 
@@ -18,12 +18,12 @@ private:
     int basis_index;
     int basis_der_x;
     int basis_der_y;
-    vector<vector<double>> vertices;
+    matrixv vertices;
 
 public:
-    BasisFun1D(double &x, vector<vector<double>> &vertices, int &basis_type, int &basis_index, int &basis_der_x);
+    BasisFun1D(double &x, matrixv &vertices, int &basis_type, int &basis_index, int &basis_der_x);
 
-    BasisFun1D(double &x, double &y,vector<vector<double>> &vertices,
+    BasisFun1D(double &x, double &y,matrixv &vertices,
                int &basis_type, int &basis_index, int &basis_der_x, int &basis_der_y);
 
     ~BasisFun1D() = default;

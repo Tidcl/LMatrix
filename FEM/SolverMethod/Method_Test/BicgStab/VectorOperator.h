@@ -8,6 +8,9 @@
 
 using namespace std;
 
+
+//add by tangxc 不建议在不满足的情况下打印错误或者直接退出，
+//add by tangxc 作为工具类最好是返回一个空结果代表运算失败，打印等业务信息让用户自己去做
 template<class Tv = vector<double>>
 Tv operator*(const double C, const Tv &x) {
     Tv res(x.size());
